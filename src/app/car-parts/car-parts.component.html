@@ -1,4 +1,4 @@
-<p>There are {{totalCarParts()}} total parts in stock.</p>
+<p class="stock">There are {{totalCarParts()}} total parts in stock.</p>
 <ul>
   <li class="card" *ngFor="let carPart of carParts" [class.featured]="carPart.featured">
     <div class="panel-body">
@@ -8,8 +8,8 @@
             <h2>{{carPart.name | uppercase }}</h2>
             <p class="description">{{carPart.description}}</p>
             <p class="price">{{carPart.price | currency: 'USD':'symbol-narrow'}}</p>
-            <p *ngIf="carPart.inStock > 0">{{carPart.inStock}} in Stock</p>
-            <p *ngIf="carPart.inStock === 0">Out of Stock</p>
+            <p class="stockCt" *ngIf="carPart.inStock > 0">{{carPart.inStock}} in Stock</p>
+            <p class="stockCt" *ngIf="carPart.inStock === 0">Out of Stock</p>
       </table>
       </div>
     </div>

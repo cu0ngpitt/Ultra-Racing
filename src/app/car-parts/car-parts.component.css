@@ -1,18 +1,33 @@
 .description {
-  color: #444;
+  color: #d9a8ed;
   font-size: small;
+  display: inline-block;
 }
 .price {
   font-weight: bold;
+  float: right;
+  margin: 13px;
+  color: #59e6ff;
 }
-.featured {
-  background: #57595D;
-  -webkit-border-image: -webkit-linear-gradient(right, #818fd8 0%, #cbb4e2 50%, #a6f2f5 100%);
-       -o-border-image: linear-gradient(to left, #818fd8 0%, #cbb4e2 50%, #a6f2f5 100%);
-          border-image: linear-gradient(to left, #818fd8 0%, #cbb4e2 50%, #a6f2f5 100%);
-  border-image-slice: 1;
+.stockCt {
+  color: #59e6ff;
+}
+.stock, .card {
+  background: #2e2830;
+  margin: 0 40px 50px 40px;
+}
+.card{
+  margin-left: 0;
+}
+.stock {
+  color: #d9a8ed;
+  padding: 20px;
+}
+h2 {
+  color: white;
 }
 .partImage {
+  background: white;
   object-fit: contain;
   height: 250px;
   width: 250px;
@@ -20,8 +35,18 @@
 }
 .product-info {
   display: inline-block;
-  height: 250px;
+  padding-top: 30px;
+  padding-left: 10px;
+  height: 220px;
+  width: 500px;
 }
 ul {
   list-style-type: none;
+}
+.featured {
+  background: #5b6477;
+  -webkit-border-image: -webkit-linear-gradient(right, #818fd8 0%, #cbb4e2 50%, #a6f2f5 100%);
+       -o-border-image: linear-gradient(to left, #818fd8 0%, #cbb4e2 50%, #a6f2f5 100%);
+          border-image: linear-gradient(to left, #818fd8 0%, #cbb4e2 50%, #a6f2f5 100%);
+  border-image-slice: 1;
 }
