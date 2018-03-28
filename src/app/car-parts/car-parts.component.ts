@@ -1,5 +1,5 @@
 import { Component, OnInit }  from '@angular/core';
-import { CarPart }            from './car-parts';
+import { CarPart }            from './car-part';
 import { CARPARTS }           from '../mock-carpart';
 
 @Component({
