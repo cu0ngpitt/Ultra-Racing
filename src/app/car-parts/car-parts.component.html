@@ -3,19 +3,15 @@
   <li class="card" *ngFor="let carPart of carParts" [class.featured]="carPart.featured">
     <div class="panel-body">
       <div class="photo">
-        <img [src]="carPart.image" [alt]="carPart.imageDesc">
-      </div>
+        <img class="partImage" [src]="carPart.image" [alt]="carPart.imageDesc" />
       <table class="product-info">
-        <tr>
-          <td>
             <h2>{{carPart.name | uppercase }}</h2>
             <p class="description">{{carPart.description}}</p>
-            <p class="price">{{carPart.price | currency: 'USD':true}}</p>
+            <p class="price">{{carPart.price | currency: 'USD':'symbol-narrow'}}</p>
             <p *ngIf="carPart.inStock > 0">{{carPart.inStock}} in Stock</p>
             <p *ngIf="carPart.inStock === 0">Out of Stock</p>
-          </td>
-        </tr>
       </table>
+      </div>
     </div>
   </li>
 </ul>
