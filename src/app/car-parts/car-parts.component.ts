@@ -1,6 +1,7 @@
 import { Component, OnInit }  from '@angular/core';
 import { CarPart }            from './car-part';
 import { CARPARTS }           from '../mock-carpart';
+import { RacingDataService }  from '../racing-data.service';
 
 @Component({
   selector: 'app-car-parts',
@@ -26,10 +27,10 @@ export class CarPartsComponent implements OnInit {
     if (carPart.quantity < carPart.inStock) carPart.quantity++;
   }
 
-  constructor() { }
+  constructor(private racingDataService: RacingDataService) { }
 
   ngOnInit() {
-    this.carParts = CARPARTS;
+    this.carParts = this.racingDataService.getCarParts();
   }
 
 }
