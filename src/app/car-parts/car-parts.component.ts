@@ -13,8 +13,11 @@ export class CarPartsComponent implements OnInit {
 
   totalCarParts() {
     let sum = 0;
-    for (let carPart of this.carParts) {
-      sum += carPart.inStock;
+
+    if (Array.isArray(this.carParts)) {
+      for (let carPart of this.carParts) {
+        sum += carPart.inStock;
+      }
     }
     return sum;
   }
@@ -30,7 +33,8 @@ export class CarPartsComponent implements OnInit {
   constructor(private racingDataService: RacingDataService) { }
 
   ngOnInit() {
-    this.carParts = this.racingDataService.getCarParts();
+    this.racingDataService.getCarParts()
+        .subscribe(carParts => this.carParts = carParts);
   }
 
 }

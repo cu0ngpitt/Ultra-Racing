@@ -9,7 +9,7 @@ export const CARPARTS: CarPart [] = [{
     "image": "/assets/images/tires.jpg",
     "imageDesc": "Tires picture",
     "featured": false,
-    "quantity": 0;
+    "quantity": 0
   },
   {
     "id": 2,
@@ -20,7 +20,7 @@ export const CARPARTS: CarPart [] = [{
     "image": "/assets/images/shocks.jpg",
     "imageDesc": "Shocks picture",
     "featured": true,
-    "quantity": 0;
+    "quantity": 0
   },
   {
     "id": 3,
@@ -31,5 +31,5 @@ export const CARPARTS: CarPart [] = [{
     "image": "/assets/images/seats.jpg",
     "imageDesc": "Seats picture",
     "featured": false,
-    "quantity": 0;
+    "quantity": 0
   }];
