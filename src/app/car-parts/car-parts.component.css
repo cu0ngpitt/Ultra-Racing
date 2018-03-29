@@ -3,12 +3,6 @@
   font-size: small;
   display: inline-block;
 }
-.price {
-  font-weight: bold;
-  float: right;
-  margin: 13px;
-  color: #59e6ff;
-}
 .stockCt {
   color: #59e6ff;
 }
@@ -44,9 +38,29 @@ ul {
   list-style-type: none;
 }
 .featured {
-  background: #5b6477;
+  background: #57595d;
   -webkit-border-image: -webkit-linear-gradient(right, #818fd8 0%, #cbb4e2 50%, #a6f2f5 100%);
        -o-border-image: linear-gradient(to left, #818fd8 0%, #cbb4e2 50%, #a6f2f5 100%);
           border-image: linear-gradient(to left, #818fd8 0%, #cbb4e2 50%, #a6f2f5 100%);
   border-image-slice: 1;
+}
+.box1 {
+  width: 320px;
+}
+.price {
+  font-weight: bold;
+  margin: 13px;
+  color: #59e6ff;
+}
+.select-quantity {
+  filter: invert(100%);
+  padding-left: 20px;
+}
+button {
+  border-color: #ff7259;
+  border-width: 1px;
+}
+.number {
+  width: 20px;
+  text-align: center;
 }

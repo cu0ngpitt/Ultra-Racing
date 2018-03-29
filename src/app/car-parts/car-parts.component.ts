@@ -16,7 +16,15 @@ export class CarPartsComponent implements OnInit {
       sum += carPart.inStock;
     }
     return sum;
-  };
+  }
+
+  downQuantity(carPart) {
+    if (carPart.quantity != 0) carPart.quantity--;
+  }
+
+  upQuantity(carPart) {
+    if (carPart.quantity < carPart.inStock) carPart.quantity++;
+  }
 
   constructor() { }
 

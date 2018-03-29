@@ -7,4 +7,5 @@ export class CarPart {
   image: string;
   imageDesc: string;
   featured: boolean;
+  quantity: number;
 }

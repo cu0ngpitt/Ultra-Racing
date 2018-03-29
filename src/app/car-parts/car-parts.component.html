@@ -5,11 +5,22 @@
       <div class="photo">
         <img class="partImage" [src]="carPart.image" [alt]="carPart.imageDesc" />
       <table class="product-info">
+        <tr>
+          <td class="box1">
             <h2>{{carPart.name | uppercase }}</h2>
             <p class="description">{{carPart.description}}</p>
-            <p class="price">{{carPart.price | currency: 'USD':'symbol-narrow'}}</p>
             <p class="stockCt" *ngIf="carPart.inStock > 0">{{carPart.inStock}} in Stock</p>
             <p class="stockCt" *ngIf="carPart.inStock === 0">Out of Stock</p>
+          </td>
+          <td class="price">{{carPart.price | currency: 'USD':'symbol-narrow'}}</td>
+          <td>
+            <div class="select-quantity">
+              <button class="decrease" (click)="downQuantity(carPart)">-</button>
+              <input class="number" type="text" [(ngModel)]="carPart.quantity">
+              <button class="increase" (click)="upQuantity(carPart)">+</button>
+            </div>
+          </td>
+        </tr>
       </table>
       </div>
     </div>
