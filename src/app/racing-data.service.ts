@@ -9,7 +9,7 @@ export class RacingDataService {
   constructor(private http: Http) { }
 
   getCarParts() {
-    return this.http.get('/car-parts.json')
+    return this.http.get('/assets/car-parts.json')
                 .map(response => <CarPart[]>response.json().data);
   }
 }
